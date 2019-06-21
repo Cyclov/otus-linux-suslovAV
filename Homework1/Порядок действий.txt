@@ -1,0 +1,12 @@
+Обновлени ядра
+1) sudo yum update - обновляем текущие пакеты до актуальных версии
+2) sudo yum install wget - устанавливаем пакет для скачивания файлов
+3) wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.48.tar.xz скачиваем файлы ядра
+4) tar -xvf linux-4.19.48.tar.xz разархивируем файлы ядра
+5) yum groupinstall "Development Tools" Устанавливаем инструменты для компиляции пакетов
+6) yum install ncurses-devel openssl-devel bc Устанавливаем инструменты для компиляции пакетов
+7) make oldconfig конфигурируем ядро
+8) make компилируем ядро
+10) make modules_install install  устанавливаем ядро и модули
+11) В файле /etc/default/grub прописываем GRUB_DEFAULT=0  для авто загрузке с последним ядром
+12) grub2-mkconfig -o /boot/grub2/grub.cfg применяем настройку grub
